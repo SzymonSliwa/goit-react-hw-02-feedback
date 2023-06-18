@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Feedback } from './FeedbackOptions/FeedbackOptions.jsx';
+import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions.jsx';
 import { Statistics } from '../components/Statistics/Statistics.jsx';
 import { Section } from '../components/SectionTitle/SectionTitle.jsx';
 import { Notification } from '../components/Notification/Notification.jsx';
@@ -35,8 +35,12 @@ export default class App extends Component {
 
     return (
       <div className="container">
-        <Section title="Please leave feedback"></Section>
-        <Feedback options={options} onLeaveFeedback={this.handleAnyFeedback} />
+        <Section title="Please leave feedback">
+          <FeedbackOptions
+            options={options}
+            onLeaveFeedback={this.handleAnyFeedback}
+          />
+        </Section>
         <Section title="Statistics">
           {this.countTotalFeedback() > 0 ? (
             <Statistics

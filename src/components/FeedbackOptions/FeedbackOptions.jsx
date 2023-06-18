@@ -2,7 +2,7 @@ import React from 'react';
 
 import propTypes from 'prop-types';
 
-export const Feedback = ({ options, onLeaveFeedback }) => {
+export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <div className="container">
       <ul className="button_list">
@@ -25,7 +25,7 @@ export const Feedback = ({ options, onLeaveFeedback }) => {
   );
 };
 
-Feedback.propTypes = {
+FeedbackOptions.propTypes = {
   options: propTypes.arrayOf(propTypes.string.isRequired).isRequired,
   onLeaveFeedback: propTypes.func.isRequired,
 };
